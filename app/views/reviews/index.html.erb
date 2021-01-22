@@ -1,0 +1,10 @@
+<ul class="list-group w-50 mx-auto">
+  <% @reviews.each do |review|%>
+  <li class="list-group-item d-flex justify-content-between"><%= review.content %>
+    <span class="badge bg-warning text-white"><%= review.rating %></span>
+  </li>
+  <% end %>
+</ul>
+<%= link_to "+", new_restaurant_review_path, class:"btn btn-outline-success"%>
+
+

@@ -1,0 +1,7 @@
+<ul class="list-group w-25 mx-auto">
+  <% @restaurants.each do |restaurant|%>
+  <li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "+", new_restaurant_path, class:"btn btn-outline-success"%>
